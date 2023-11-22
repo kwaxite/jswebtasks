@@ -1,7 +1,5 @@
 const body = document.body 
-body.append('hello sam')
-
-const div = document.createElement('div')
-body.append(div)
-div.innerText ='at long last'
-// div.innerHTML = 'what '
+const div = document.querySelector('div')
+spanhi = document.querySelector('#hi')
+spanbi = document.querySelector('#bi')
+spanbi.id = 'bbbbbb'
