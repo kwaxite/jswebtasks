@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="eventlistener.css">
+    <script src="eventlistener.js" defer></script>
 </head>
 <body>
     <h1 id="main-heading">Event Listeners</h1>
     <div class = "container"> 
         <div class = "boxes box-1">
             <h1 id="heading">Example 1</h1>
-            <button>Enter</button>
+            <!-- add event listener: onclick button  -->
+            <button onclick="alert('I love JS')">Enter</button>
         </div>
         <div class = "boxes box-2">
             <h1 id="heading">Example 2</h1>
-            <button>Enter</button>
+            <button id="btn2">Enter</button>
         </div>
         <div class = "boxes box-3">
             <h1 id="heading">Example 3</h1>
-            <button>Enter</button>
+            <button id="btn3">Enter</button>
         </div>
     </div>
 </body>
