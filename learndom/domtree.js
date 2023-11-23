@@ -26,3 +26,6 @@ console.log(li.classList.contains('list-items')) //returns true
 // textContent - display the same way as HTML file, e.g. will show indents if there is one in the HTML file
 // innerHTML - similar to textContent, but also show any tags within. 
 // innerHTML - security issues, user can gain access to js code and exploit it
+
+// to remove elements
+// li.remove

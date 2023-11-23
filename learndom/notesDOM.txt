@@ -1,4 +1,18 @@
 DOM MANIPULATION
+
+Picture shows the DOM tree and all it's nodes. The DOM tree nodes includes
+elements, attributes, text, comments, even line breaks etc. 
+
+The DOM object itself is a property of the window object, which is the global top level
+object representing the tab and the browser. The window object has access to so much information
+such as the toolbar, the height, the width of the window, even things like prompts and alerts.
+
+Most of the nodes in the DOM tree has a parent child (or sibling) relationship.
+The document node is the root node which we use to access and manipulate the other nodes.
+Example html element is a parents to head and body. head and body are siblings. 
+html attributes such as styles, classes etc are also considered as nodes in the DOM
+hierarchy but they don't actaully participate in the parent child relationship. 
+
 PART 1 -  How to SELECT an element
 // GetElementById() - to select element by id
 // assign to a variable to be able to manipulate it
@@ -42,3 +56,34 @@ for (let i=0; i<listItems.length; i++){
     listItems[i].style.fontSize = '2rem'
 }
 console.log(listItems)
+
+// PART 3 - a. CREATING elements
+
+const ul = document.querySelector('ul');
+const li = document.createElement('li');
+
+// b. add element - using append()
+ul.append(li);
+
+// c. modify element e.g. include text
+li.innerText ='Superman'
+
+// d. modifying attributes and classes
+mainheading = document.querySelector('#main-heading')
+
+li.setAttribute('id', 'main-heading');
+li.removeAttribute('id')
+
+li.classList.add('list-items') // this makes our new list item same as existing lists
+
+// find out if an element has a specific class
+console.log(li.classList.contains('list-items')) //returns true
+
+// dif btn innerText, textContent, innerHTML
+// innerText - displays the visible text
+// textContent - display the same way as HTML file, e.g. will show indents if there is one in the HTML file
+// innerHTML - similar to textContent, but also show any tags within. 
+// innerHTML - security issues, user can gain access to js code and exploit it
+
+// to remove elements
+// li.remove
