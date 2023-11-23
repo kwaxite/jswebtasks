@@ -1,17 +1,28 @@
-// PART 2 - STYLING elements
-// Steps 
-// 1. select element 
-// 2. add property you want using dot notation
 
-const title = document.querySelector('#main-heading');
-title.style.color = 'yellow';
-// note that this is an example of an inline styling
-//So will not work for more than one element
-//Must you iteration (loop) if you want to use this for many elements.
+// PART 3 - a. CREATING elements
 
-// example of how to apply inline styling to MULTIPLE elements
-const listItems = document.querySelectorAll('.list-items')
-for (let i=0; i<listItems.length; i++){
-    listItems[i].style.fontSize = '2rem'
-}
-console.log(listItems)
+const ul = document.querySelector('ul');
+const li = document.createElement('li');
+
+// b. add element - using append()
+ul.append(li);
+
+// c. modify element e.g. include text
+li.innerText ='Superman'
+
+// d. modifying attributes and classes
+mainheading = document.querySelector('#main-heading')
+
+li.setAttribute('id', 'main-heading');
+li.removeAttribute('id')
+
+li.classList.add('list-items') // this makes our new list item same as existing lists
+
+// find out if an element has a specific class
+console.log(li.classList.contains('list-items')) //returns true
+
+// dif btn innerText, textContent, innerHTML
+// innerText - displays the visible text
+// textContent - display the same way as HTML file, e.g. will show indents if there is one in the HTML file
+// innerHTML - similar to textContent, but also show any tags within. 
+// innerHTML - security issues, user can gain access to js code and exploit it
