@@ -1,31 +1,32 @@
+// 4a - Parent node traversal - going up the DOM tree
+let ul = document.querySelector('ul')
 
-// PART 3 - a. CREATING elements
+// 2 options to find parent node
+console.log(ul.parentNode) // example1
+console.log(ul.parentElement) // example2
 
-const ul = document.querySelector('ul');
-const li = document.createElement('li');
+// 2 options to find Grand-parent node
+console.log(ul.parentNode.parentNode) // example1
+console.log(ul.parentElement.parentElement) // example2
 
-// b. add element - using append()
-ul.append(li);
+// 2 options to find child
+console.log(ul.childNodes) // example1 - gives 11 nodes
+console.log(ul.children) // example2 - gives 5 children
+// Above example shows the difference betweeb elements and nodes
+// text are counted as nodes
 
-// c. modify element e.g. include text
-li.innerText ='Superman'
+ul.children[1].style.backgroundColor = "red"; // bcos its arraylike 
+ul.children[1].style.color = "yellow";
 
-// d. modifying attributes and classes
-mainheading = document.querySelector('#main-heading')
+// child node travesal
+console.log(ul.firstChild)
+console.log(ul.firstElementChild)
+ul.firstElementChild.style.color = 'blue'
+// ul.firstChild.style.color = 'blue' // gives error as first node is an indentation
 
-li.setAttribute('id', 'main-heading');
-li.removeAttribute('id')
+// sibling traversal
+console.log(ul.previousSibling)
+console.log(ul.nextSibling)
+console.log(ul.previousElementSibling)
+console.log(ul.nextElementSibling)
 
-li.classList.add('list-items') // this makes our new list item same as existing lists
-
-// find out if an element has a specific class
-console.log(li.classList.contains('list-items')) //returns true
-
-// dif btn innerText, textContent, innerHTML
-// innerText - displays the visible text
-// textContent - display the same way as HTML file, e.g. will show indents if there is one in the HTML file
-// innerHTML - similar to textContent, but also show any tags within. 
-// innerHTML - security issues, user can gain access to js code and exploit it
-
-// to remove elements
-// li.remove

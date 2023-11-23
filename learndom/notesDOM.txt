@@ -1,5 +1,6 @@
 DOM MANIPULATION
 
+Understanding the DOM is crucial for creating responsive and user-friendly websites. 
 Picture shows the DOM tree and all it's nodes. The DOM tree nodes includes
 elements, attributes, text, comments, even line breaks etc. 
 
@@ -87,3 +88,13 @@ console.log(li.classList.contains('list-items')) //returns true
 
 // to remove elements
 // li.remove
+
+Part 4 - Traversing the DOM
+Just like you can use a map to find your way around a city, programmers can use the DOM to find different 
+parts of a website and change their properties.
+
+DOM traversing, which means “move through”, are used to “find” (or select) 
+HTML elements based on their relation to other elements. 
+
+4a - Parent node traversal
+
