@@ -1,18 +1,17 @@
-// GetElementById() - to select element by id
-// assign to a variable to be able to manipulate it
+// PART 2 - STYLING elements
+// Steps 
+// 1. select element 
+// 2. add property you want using dot notation
 
-const title = document.getElementById('main-heading')
-console.log(title)
+const title = document.querySelector('#main-heading');
+title.style.color = 'yellow';
+// note that this is an example of an inline styling
+//So will not work for more than one element
+//Must you iteration (loop) if you want to use this for many elements.
 
-// GetElementByClassName() - 
-
-const listItems = document.getElementsByClassName('list-items')
-console.log(listItems) // returns an array like object with all the classes
-
-// getElementsByTagName()
-
-const body = document.getElementsByTagName('body')
-console.log(body)
-
-// querySelector() - accepts all CSS style selectors
-// selects the first one that matches
+// example of how to apply inline styling to MULTIPLE elements
+const listItems = document.querySelectorAll('.list-items')
+for (let i=0; i<listItems.length; i++){
+    listItems[i].style.fontSize = '2rem'
+}
+console.log(listItems)

@@ -1,0 +1,44 @@
+DOM MANIPULATION
+PART 1 -  How to SELECT an element
+// GetElementById() - to select element by id
+// assign to a variable to be able to manipulate it
+
+const title = document.getElementById('main-heading')
+console.log(title)
+
+// GetElementByClassName() - 
+
+const listItems = document.getElementsByClassName('list-items')
+console.log(listItems) // returns an array like object with all the classes
+
+// getElementsByTagName()
+
+const body = document.getElementsByTagName('body')
+console.log(body)
+
+// querySelector() - accepts all CSS style selectors
+// selects the FIRST one that matches
+// use is to grab any ELEMENT you want
+
+const div = document.querySelector('div')
+console.log(div)
+
+// querySelectorAll() - selects ALL of elements of the same type
+
+PART 2 - STYLING elements
+// Steps 
+// 1. select element 
+// 2. add property you want using dot notation
+
+const title = document.querySelector('#main-heading');
+title.style.color = 'yellow';
+// note that this is an example of an inline styling
+//So will not work for more than one element
+//Must you iteration (loop) if you want to use this for many elements.
+
+// example of how to apply inline styling to MULTIPLE elements
+const listItems = document.querySelectorAll('.list-items')
+for (let i=0; i<listItems.length; i++){
+    listItems[i].style.fontSize = '2rem'
+}
+console.log(listItems)
