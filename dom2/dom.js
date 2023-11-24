@@ -40,3 +40,31 @@ console.log(container.insertBefore(div2,display))
 div2.classList.add('nana')
 console.log(div2)
 console.log(container.childNodes)
+
+div2.textContent = "I can't believe this";
+div2.style.color = "purple";
+div2.style.cssText = "color: blue; background: yellow";
+div2.style.border = 'solid';
+
+const para = document.createElement('p')
+console.log(para)
+container.appendChild(para)
+console.log(container)
+para.textContent = "Hey I am red";
+para.style.color = "red";
+
+const hthree = document.createElement('h3')
+container.insertBefore(hthree, div2)
+
+hthree.textContent = "I’m a blue h3!";
+hthree.style.cssText = "color: blue; background: lightgreen"
+const div3 = document.createElement('div')
+container.appendChild(div3)
+
+div3.setAttribute('class', 'div3')
+console.log(container)
+
+const hnew1 = document.createElement('h3')
+div3.appendChild(hnew1)
+console.log(div3)
+hnew1.textContent = "I’m in a div";

@@ -65,6 +65,9 @@ Remove elements
 parentNode.removeChild(child) - removes child from parentNode on the DOM and returns a reference to child.
 
 5 ADDING INLINE STYLE
+See link for different kinds of styling ATTRIBUTES
+
+https://domenlightenment.com/#6.2
 
 Examples:
 div.style.color = 'blue';                                      
