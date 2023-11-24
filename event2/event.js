@@ -1,0 +1,1 @@
+const revealbtn = document.querySelector('.reveal-btn')
