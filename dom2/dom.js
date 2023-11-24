@@ -68,3 +68,19 @@ const hnew1 = document.createElement('h3')
 div3.appendChild(hnew1)
 console.log(div3)
 hnew1.textContent = "I’m in a div";
+
+const btn = document.querySelector('.btn')
+
+
+
+function clickMe() {
+    alert("Hello World")
+}
+
+// btn.addEventListener("click", clickMe);
+
+// METHOD 3
+// btn.addEventListener('click', clickMe);
+btn.addEventListener('click', function (e) {
+    console.log(e);
+  });
