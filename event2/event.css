@@ -20,10 +20,6 @@
     flex: auto;
  }
 
- /* .hidden-content {
-    display: none;
- } */
-
 
  #main-heading{
     text-align: center;
@@ -33,4 +29,12 @@
 
  .reveal-btn {
     font-size: x-large;
+ }
+
+  .hidden-content {
+    display: none;
+ }
+
+ .hidden-content.reveal-btn{
+    display: block;
  }

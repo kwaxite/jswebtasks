@@ -1,0 +1,17 @@
+/* .container {
+    display: flex;
+} */
+
+ /* .boxes {
+    min-height: 250px;
+    position:relative;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 15px;
+    flex: auto;
+ } */
+
+ .hidden-content.reveal-btn{
+    display: block;
+    background-color: blue;
+ }
