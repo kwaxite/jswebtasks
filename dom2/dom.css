@@ -1,0 +1,10 @@
+
+div#container > div.display{
+
+    color:greenyellow;
+    font-size: x-large;
+}
+
+#container > .controls{
+    background-color: brown;
+}

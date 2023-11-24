@@ -1,0 +1,53 @@
+
+DOM - Document Object Model
+The DOM (or Document Object Model) is a tree-like representation of the 
+contents of a webpage - a tree of “nodes” with different relationships 
+depending on how they’re arranged in the HTML document
+
+Targeting nodes with selectors
+When working with the DOM, you use “selectors” to target the nodes you want to work with.
+
+Examples of CSS-style selectors:
+
+div.display
+.display
+#container > .display
+div#container > div.display
+
+Relational selectors
+We can also use relationship selectors properties to target the nodes you want.
+Examples
+
+querySelector and querySelectorAll is the two you should use if possible
+element.querySelector(selector) - returns a reference 
+to the first match of selector.
+
+element.querySelectorAll(selectors) - returns a “nodelist” containing 
+references to all of the matches of the selectors.
+
+const display = document.querySelector('.display')
+// selects the div class display
+
+const container = document.getElementById('container')
+// select element by id
+
+const controls = document.getElementsByClassName('controls')
+// select element by class
+
+const display = document.querySelector('.display')
+console.log(display.nextElementSibling) 
+// to identify the next sibling from current node. 
+// can use .previousElementSibling to find previous element of a node
+
+important - querySelectorAll
+It’s important to note that when using querySelectorAll, the return value is not an array. 
+It looks like an array, and it somewhat acts like an array, but it’s really a “nodelist”. 
+The big distinction is that several array methods are missing from nodelists. 
+One solution, if problems arise, is to convert the nodelist into an array. 
+You can do this with Array.from() or the spread operator.
+
+DOM methods
+When your HTML code is parsed by a web browser, it is converted to the DOM as was mentioned above. 
+One of the primary differences is that these nodes are objects that have many properties and 
+methods attached to them. These properties and methods are the primary tools we are going to use 
+to manipulate our webpage with JavaScript.
